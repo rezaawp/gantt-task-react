@@ -448,6 +448,7 @@ const handleTaskBySVGMouseEventForBar = (
       }
       break;
     case "start": {
+      if (selectedTask.dragable === false) break;
       const newX1 = startByX(svgX, xStep, selectedTask);
       changedTask.x1 = newX1;
       isChanged = changedTask.x1 !== selectedTask.x1;
@@ -481,6 +482,7 @@ const handleTaskBySVGMouseEventForBar = (
       break;
     }
     case "end": {
+      if (selectedTask.dragable === false) break;
       const newX2 = endByX(svgX, xStep, selectedTask);
       changedTask.x2 = newX2;
       isChanged = changedTask.x2 !== selectedTask.x2;
@@ -514,6 +516,7 @@ const handleTaskBySVGMouseEventForBar = (
       break;
     }
     case "move": {
+      if (selectedTask.dragable === false) break;
       const [newMoveX1, newMoveX2] = moveByX(
         svgX - initEventX1Delta,
         xStep,
