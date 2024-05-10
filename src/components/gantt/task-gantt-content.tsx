@@ -241,10 +241,12 @@ export const TaskGanttContent: React.FC<TaskGanttContentProps> = ({
     // Change task event start
     else if (action === "move") {
       if (!svg?.current || !point) return;
+      // console.log("move = ", event);
       point.x = event.clientX;
       const cursor = point.matrixTransform(
         svg.current.getScreenCTM()?.inverse()
       );
+      console.log("cursor in event = ", event);
       setInitEventX1Delta(cursor.x - task.x1);
       setGanttEvent({
         action,

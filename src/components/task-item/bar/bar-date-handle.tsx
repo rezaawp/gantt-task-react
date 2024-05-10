@@ -27,6 +27,10 @@ export const BarDateHandle: React.FC<BarDateHandleProps> = ({
       ry={barCornerRadius}
       rx={barCornerRadius}
       onMouseDown={onMouseDown}
+      // onInput={onMouseDown}
+      // onTouchMove={(e: any) => {
+      //   console.log("onTouchMove in bar date handle = ", e);
+      // }}
     />
   );
 };

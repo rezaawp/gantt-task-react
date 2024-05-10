@@ -136,6 +136,7 @@ export const Calendar: React.FC<CalendarProps> = ({
           className={styles.calendarBottomText}
         >
           {bottomValue}
+
         </text>
       );
       if (
@@ -380,6 +381,8 @@ export const Calendar: React.FC<CalendarProps> = ({
     case ViewMode.Hour:
       [topValues, bottomValues] = getCalendarValuesForHour();
   }
+  // console.log("topValues", topValues);
+  // console.log("bottomValues", bottomValues);
   return (
     <g className="calendar" fontSize={fontSize} fontFamily={fontFamily}>
       <rect

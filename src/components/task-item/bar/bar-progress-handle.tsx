@@ -14,6 +14,7 @@ export const BarProgressHandle: React.FC<BarProgressHandleProps> = ({
       className={styles.barHandle}
       points={progressPoint}
       onMouseDown={onMouseDown}
+      // onInput={onMouseDown}
     />
   );
 };

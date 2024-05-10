@@ -40,7 +40,7 @@ export const BarDisplay: React.FC<BarDisplayProps> = ({
   };
 
   return (
-    <g onMouseDown={onMouseDown}>
+    <g onMouseDown={onMouseDown} onInput={onMouseDown}>
       <rect
         x={x}
         width={width}
